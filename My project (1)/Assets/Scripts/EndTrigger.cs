@@ -5,6 +5,10 @@ public class EndTrigger : MonoBehaviour
     public GameManager gameManager;
     private void OnTriggerEnter(Collider other)
     {
-        gameManager.win();
+        if (other .tag == "Player")
+        {
+            gameManager.win();
+        }
+        
     }
 }
